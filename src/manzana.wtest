@@ -1,0 +1,21 @@
+import example.manzana
+
+test "madurez" {
+
+	assert.equals(5, manzana.energiaQueAporta())
+	manzana.madurar()
+	assert.equals(10, manzana.energiaQueAporta())
+	manzana.madurar()
+	assert.equals(15, manzana.energiaQueAporta())
+
+}
+
+test "manzana rica" {
+	
+	assert.notThat(manzana.rica())
+	manzana.madurar()
+	assert.notThat(manzana.rica())
+	manzana.madurar()
+	assert.that(manzana.rica())
+	
+}

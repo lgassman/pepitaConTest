@@ -1,0 +1,22 @@
+import example.*
+
+test "pepita come alpiste" {
+
+
+	assert.equals(100, pepita.energia())
+	pepita.comer(alpiste)
+	assert.equals(120, pepita.energia())
+
+}
+
+test "pepita come manzana" {
+	
+	pepita.comer(manzana)
+	assert.equals(105, pepita.energia())
+}
+
+test "pepita vuela 15" {
+	
+	pepita.volar(15)
+	assert.equals(75, pepita.energia())
+}
